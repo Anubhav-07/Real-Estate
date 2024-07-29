@@ -7,8 +7,8 @@ import cookieParser from 'cookie-parser';
 import listingRouter from './routes/listing.route.js';
 dotenv.config();
 
-
-mongoose.connect("mongodb+srv://User_1:7WNG8MrcnZUeRpXL@mongotube.fkafwkz.mongodb.net/estate?retryWrites=true&w=majority&appName=MongoTube")
+const MONGO_URI = "mongodb+srv://User_1:7WNG8MrcnZUeRpXL@mongotube.fkafwkz.mongodb.net/estate?retryWrites=true&w=majority&appName=MongoTube"
+mongoose.connect(MONGO_URI)
     .then(() => {
         console.log('Connected to MongoDB');
     })
